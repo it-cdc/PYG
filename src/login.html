@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my登录页面</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    @@include("nav_bar.html",{"pagename":"登录"})
+
+    <!-- 登录内容 -->
+    <div class="pyg_view">
+        <form class="pyg_forms mui-input-group">
+            <div class="mui-input-row">
+                <label>手机</label>
+                <input type="text" name="username" value="15112195912" class="mui-input-clear" placeholder="请输入用户名">
+            </div>
+            <div class="mui-input-row">
+                <label>密码</label>
+                <input type="password" name="password" class="mui-input-password" placeholder="请输入密码">
+            </div>
+        </form>
+
+        <!-- 注册按钮 -->
+        <a href="javascript:;" class="zc_btn mui-btn mui-btn-primary mui-btn-outlined">注册</a>
+        <!-- 登录按钮 -->
+        <a href="javascript:;" class="dl_btn mui-btn mui-btn-primary mui-btn-outlined">登录</a>
+    </div>
+
+    <!-- 底部公共模板开始 -->
+    @@include("footer.html")
+    <!-- 底部公共模板结束 -->
+</body>
+
+</html>
+<script src="./lib/mui/js/mui.js"></script>
+<!-- <script src="./lib/arttemplate/template-web.js"></script> -->
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/login.js"></script>

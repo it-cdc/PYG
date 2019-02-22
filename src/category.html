@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my分类页面</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/category.css">
+    <script>
+        setHTML();
+        // 根屏幕的宽度 设置 根标签的字体大小 
+        function setHTML() {
+            // 基础值
+            var baseVal = 100;
+            // 设计稿的宽度
+            var pageWidth = 375;
+            // 要适配的屏幕的宽度?
+            var screenWidth = document.querySelector("html").offsetWidth;
+            // 要设置的fontsize
+            var fontsize = screenWidth * baseVal / pageWidth;
+            // 设置到html标签的中
+            document.querySelector("html").style.fontSize = fontsize + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 头部模板 -->
+    @@include("header.html")
+    <!-- 分类页面内容 -->
+    <div class="pyg_view">
+        <!-- 分类页面左侧 -->
+        <div class="pyg_left">
+            <ul class="pyg_left_ul">
+
+            </ul>
+        </div>
+        <!-- 分类页面右侧 -->
+        <div class="pyg_right">
+          
+    </div>
+    <!-- 底部模板 -->
+    @@include("footer.html",{"index":1})
+</body>
+
+<!-- 模板引擎开始 -->
+<!-- 左侧模板开始 -->
+<script type="text/html" id="categoriesTpl">
+    {{ each arr item index }}
+        <li class="{{ index===0?'active':'' }}">{{ item.cat_name }}</li>
+    {{ /each }}
+</script>
+<!-- 左侧模板结束 -->
+<!-- 左侧模板开始 -->
+<script type="text/html" id="categoriesTPL_right">
+    <div>
+        {{ each arr item1  index1 }}
+        <div class="goods_item">
+                <div class="goods_title">{{ item1.cat_name }}</div>
+                <div class="goods_sm_list">
+                    {{ each item1.children item2 index2 }}
+                    <a href="goods_list.html?cid={{ item2.cat_id }}" class="brand_item">
+                        <!-- <img src="http://api.pyg.ak48.xyz/{{ item2.cat_icon }}" alt=""> -->
+                        <!-- 优化url -->
+                        <img src="{{$imports.BaseUrl}}/{{item2.cat_icon}}" alt="">
+                        <div>{{ item2.cat_name }}</div>
+                    </a>
+                {{ /each }}
+                </div>
+        </div>
+        {{ /each }}
+    </div>
+</script>
+<!-- 左侧模板结束 -->
+<!-- 模板引擎结束 -->
+
+</html>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/arttemplate/template-web.js"></script>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/iscroll/iscroll.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>

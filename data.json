@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+    "group_img": "http://image4.suning.cn/uimg/cms/img/149559219946350066.png",
+    "goods": [{
+      "goods_id": 3294,
+      "goods_name": "adidas阿迪达斯男子外套夹克防风服2017年新款休闲运动服BQ5528",
+      "goods_price": 329,
+      "goods_big_logo": "http://image3.suning.cn/uimg/mcmp/tm/0010133102000000000716617691_2_800x800.jpg",
+      "goods_small_logo": "http://image3.suning.cn/uimg/mcmp/tm/0010133102000000000716617691_2_400x400.jpg",
+      "cat_id": 1018
+    }
+  ]
+  }
+],
+  "meta": {
+    "msg": "获取成功",
+    "status": 200
+  }
+}

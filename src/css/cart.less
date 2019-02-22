@@ -1,0 +1,137 @@
+@import "common.less";
+
+.pyg_view{
+    padding: 10px;
+}
+//配送地址
+.address_row{
+    .address_title{
+        font-size: 14px;
+        color: #666;
+    }
+    .address_content{
+        background-color: #fff;
+        display: flex;
+        padding: 5px;
+        .address_left{
+            flex: 1;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .address_right{
+            flex: 5;
+            div{
+                font-size: 15px;
+            }
+            span{
+                font-size: 13px;
+                color: #666;
+            }
+        }
+    }
+}
+
+//总价
+.totla_row{
+    margin-top: 30px;
+    .totla_title{
+        font-size: 14px;
+        color: #666;
+    }
+    .totla_content{
+        display: flex;
+        background-color: #fff;
+        justify-content: space-between;
+        padding: 10px;
+        .totla_left{
+            font-size: 18px;
+            span{
+                color: red;
+            }
+        }
+        .totla_right{
+            font-size: 14px;
+        }
+    }
+}
+
+//订单
+.order_row{
+    margin-top: 30px;
+    .order_title{
+        font-size: 14px;
+        color: #666;
+    }
+}
+.order_content{
+    background-color: #fff;
+    .cart_list{
+        .crat_item{
+            display: flex;
+            padding: 10px;
+            .chk_wrap{
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .chk_inp{
+                    position: static;
+                }
+            }
+            .cart_img_wrap{
+                flex: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 80%;
+                }
+            }
+            .cart_info_wrap{
+                flex: 4;
+                overflow: hidden;
+                .goods_name{
+                    font-size: 13px;
+                    color: #666;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    white-space: normal!important;
+                    text-overflow: ellipsis;
+                    word-wrap: break-word;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+                .goods_num{
+                    margin: 10px 0;
+                }
+                .goods_price{
+                    color:@bgColor;
+                }
+            }
+        }
+    }
+}
+
+body{
+    display: none;
+}
+
+// 不是编辑状态的时候 某些标签 是隐藏
+#cart_body{
+    .delete_btn,
+    .edit_btn,
+    .chk_wrap{
+        display: none;
+    }
+}
+/* 控制页面的某些标签 显示 */
+#cart_body .edit_status{
+    .delete_btn,.mui-numbox{
+        display: block;
+    }
+    .chk_wrap{
+        display: flex;
+    }
+}

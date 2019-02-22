@@ -1,0 +1,20 @@
+
+
+<footer class="pyg_footer">
+    <a href="index.html" @@if(context.index == 0 ){class='active' }>
+        <span class="fa fa-home"></span>
+        <div>首页</div>
+    </a>
+    <a href="category.html" @@if(context.index == 1 ){class='active' }>
+        <span class="fa fa-list-ul"></span>
+        <div>分类</div>
+    </a>
+    <a href="cart.html" @@if(context.index ==2 ){class='active' }>
+        <span class="fa fa-cart-plus"></span>
+        <div>购物车</div>
+    </a>
+    <a href="login.html" @@if(context.index ==3 ){class='active' }>
+        <span class="fa fa fa-user"></span>
+        <div>我的</div>
+    </a>
+</footer>

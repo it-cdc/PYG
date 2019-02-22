@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my商品列表</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/goods_list.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="gl_bar mui-bar mui-bar-nav">
+        <a class="mui-action-back fa fa-search mui-icon-left-nav mui-pull-right"></a>
+        <h4 class="mui-title">搜索</h4>
+    </header>
+    <!-- 商品列表内容 -->
+    <div class="pyg_view">
+        <div>
+            <ul class="goods_lst">
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- 底部模板 -->
+    @@include("footer.html")
+</body>
+
+<!-- 模板引擎 开始 -->
+<script type="text/html" id="searchTpl">
+    {{ each arr item index }}
+        <li>
+            <a class="items_li" href="goods_detail.html?goods_id={{ item.goods_id }}">
+                <!-- 左侧 图片容器 -->
+                <div class="goods_left">
+                    <img src="{{ item.goods_small_logo }}"alt="">
+                </div>
+                <!-- 右侧 商品详情 -->
+                <div class="goods_right">
+                    <!-- 商品的名字 -->
+                    <div class="goods_nane">{{ item.goods_name }} </div>
+                    <!-- 商品的价格 -->
+                    <span class="goods_price">￥{{ item.goods_price }}</span>
+                </div>
+            </a>
+        </li>
+    {{ /each }}
+</script>
+<!-- 模板引擎 结束 -->
+
+</html>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/arttemplate/template-web.js"></script>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/goods_list.js"></script>

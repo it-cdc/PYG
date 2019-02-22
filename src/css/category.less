@@ -1,0 +1,59 @@
+@import "common.less";
+
+.pyg_view {
+    display: flex;
+    overflow: hidden;
+
+    .pyg_left {
+        width: .8rem;
+        // background-color: pink;
+        overflow: hidden;
+        font-size: .14rem;
+
+        .pyg_left_ul {
+            
+            li {
+                height: .4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .active{
+                background-color: #fff;
+                border-left: 3px solid blue;
+            }
+        }
+    }
+
+    .pyg_right {
+        flex: 1;
+        background-color: #fff;
+        overflow: hidden;
+        .goods_item{
+            font-size: .14rem;
+            // 标题
+            .goods_title{
+                color: rgb(14, 14, 71);
+                font-size: .2rem;
+                padding-left: .1rem;
+                height: .4rem;
+                line-height: .4rem;
+                font-weight: 600;
+            }
+            // 产品、图片
+            .goods_sm_list{
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                .brand_item{
+                    width: 33.33%;
+                    color: @bgColor;
+                    img{
+                        width: 70%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

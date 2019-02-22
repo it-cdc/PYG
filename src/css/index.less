@@ -1,0 +1,55 @@
+@import "common.less";
+
+//首页导航开始
+.pyg_nav{
+  display: flex;
+  a{
+    flex: 1;
+    padding: 12px;
+  }
+}
+//首页导航结束
+
+// 商品信息开始
+.pyg_good_list{
+  padding: 0px 10px;
+  .goods_list{
+    // 标题图片
+    .goods_img{
+      margin:  5px 0px;
+    }
+    //商品信息
+    .goods_ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li{
+        background-color: #fff;
+        width: 49%;
+        margin-bottom: 5px;
+        padding: 5px;
+        a{
+          .goods_name{
+            font-size: 12px;
+            color:#000;
+            height: 42px;
+            overflow: hidden;
+          }
+          .goods_price{
+            font-size: 18px;
+            color: red;
+          }
+        }
+        //找相似
+        .mui-btn{
+          margin: 0 auto;
+          display: block;
+          width: 80%;
+          padding: 6px 12px;
+        }
+      }
+    }
+  }
+}
+
+// 商品信息结束
